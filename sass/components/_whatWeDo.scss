@@ -1,0 +1,44 @@
+.function {
+    @include section (0px);
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+            display: block;
+        }
+
+}
+
+.our-work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.our-work__item {
+    position: relative;
+}
+
+.section__subtitle {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 700;
+    color: $primary-text-color;
+    line-height: 1.17;
+}
+
+.our-work__text {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $white-color;
+}

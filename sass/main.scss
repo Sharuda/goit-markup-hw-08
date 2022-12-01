@@ -1,0 +1,33 @@
+// utils
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
+// base
+@import './base/normalize';
+@import "./base/base";
+@import './base/reset';
+@import './base/animation';
+
+
+// components
+
+@import './components/section';
+@import './components/container';
+@import './components/page-header';
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/contacts";
+@import "./components/hero";
+@import './components/button';
+@import "./components/benefits";
+@import './components/whatWeDo';
+@import "./components/team";
+@import './components/socials';
+@import './components/clients';
+@import './components/footer-page';
+@import './components/footer-socials';
+@import './components/modal';
+@import './components/form-modal';
+@import './portfolio/buttons';
+@import './portfolio/examplesWork';

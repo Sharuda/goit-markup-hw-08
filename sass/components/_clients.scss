@@ -1,0 +1,40 @@
+.clients{
+    @include section;
+}
+.list-clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.list-clients__item {
+    margin-top: 50px;
+
+    flex-basis: calc((100% - 30px * (2 - 1)) / 2);
+}
+
+.list-clients__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    // width: 170px;
+    height: 92px;
+    color: #afb1b8;
+
+    transition: color $time-transition;
+
+    &:hover, &:focus{
+        color: $accent-color;
+    }
+}
+
+
+.list-clients__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}

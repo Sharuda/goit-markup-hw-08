@@ -1,0 +1,11 @@
+@keyframes move {
+    0% {
+        transform: rotate(-540deg) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(0) scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}

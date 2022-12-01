@@ -1,0 +1,67 @@
+.benefits{
+    @include section;
+
+    @media screen and (min-width: 1200px) {
+            @include section (94px);
+        }
+}
+.list-benefits {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $background-color;
+    border-radius: 4px;
+    height: 120px;
+
+    @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+
+                @media screen and (min-width: 1200px) {
+                    width: 270px;
+                }
+}
+
+.list-benefits__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.list-benefits__subtitle {
+    margin-top: 30px;
+    text-transform: uppercase;
+    line-height: 1.14;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+            text-align: left;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
+}
+
+.list-benefits__paragraph {
+    margin-top: 10px;
+
+    color: $additional-color;
+    line-height: 1.71;
+
+    @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+}
