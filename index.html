@@ -24,6 +24,28 @@
             <span class="header-page__logo">Web</span>
             Studio
           </a>
+
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="switch mobile menu">
+              <use class="menu-button__icon-cross" href="./images/icons.svg#icon-close_40px"></use>
+              <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
+            </svg>
+          </button>
+
+          <div class="menu-container" id="menu-container" data-menu>
+            <div class="navigation"></div>
+            <div class="contacts"></div>
+          </div>
+
+          <!-- <div class="container">
+            <button type="button" data-modal-open>Открыть</button>
+          </div> -->
           <ul class="site-nav">
             <li class="site-nav__item site-nav__item--current">
               <a class="site-nav__link site-nav__link--current" href="./index.html">Studio</a>
@@ -121,20 +143,21 @@
           <h2 class="section__subtitle">What we do</h2>
           <ul class="our-work">
             <li class="our-work__item">
-              <img src="images/img.jpg" alt="person writing code" width="370" height="294" />
+              <img src="./images/whatWeDo/img.jpg" alt="person writing code" width="370" height="294" loading="lazy" />
               <p class="our-work__text">desktop apps</p>
             </li>
             <li class="our-work__item">
               <img
-                src="images/image.jpg"
+                src="./images/whatWeDo/image.jpg"
                 alt="person holding phone and looking at the monitor screen"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="our-work__text">Mobile apps</p>
             </li>
             <li class="our-work__item">
-              <img src="images/img3.jpg" alt="person choosing color" width="370" height="294" />
+              <img src="./images/whatWeDo/img3.jpg" alt="person choosing color" width="370" height="294" loading="lazy" />
               <p class="our-work__text">design solutions</p>
             </li>
           </ul>
@@ -146,7 +169,25 @@
           <h2 class="section__subtitle">Our Team</h2>
           <ul class="list-team">
             <li class="list-team__item">
-              <img src="images/product_designer.jpg" alt="Product Designer" width="450" height="460"/>
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-lg@1x.jpg 1x, ./images/team/img-lg@2x.jpg 2x"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-md@1x.jpg 1x, ./images/team/img-md@2x.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-sm@1x.jpg 1x, ./images/team/img-sm@2x.jpg 2x"
+                />
+                <img src="./images/team/img-md@1x.jpg" alt="Product Designer" width="450" height="460" loading="lazy" />
+              </picture>
+
               <div class="container__body">
                 <h3 class="list-team__subtitle">Christopher Walker</h3>
                 <p class="list-team__paragraph">Product Designer</p>
@@ -183,7 +224,26 @@
               </div>
             </li>
             <li class="list-team__item">
-              <img src="images/frontend_developer.jpg" alt="Frontend Developer" width="450" height="460" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-lg@1x-1.jpg 1x, ./images/team/img-lg@2x-1.jpg 2x"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-md@1x-1.jpg 1x, ./images/team/img-md@2x-1.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-sm@1x-1.jpg 1x, ./images/team/img-sm@2x-1.jpg 2x"
+                />
+               
+                <img src="./images/team/img-md@1x-1.jpg" alt="Frontend Developer" width="450" height="460" loading="lazy" />
+              </picture>
+
               <div class="container__body">
                 <h3 class="list-team__subtitle">Kylie Evans</h3>
                 <p class="list-team__paragraph">Frontend Developer</p>
@@ -220,7 +280,26 @@
               </div>
             </li>
             <li class="list-team__item">
-              <img src="images/marketing.jpg" alt="Marketing" width="450" height="460" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-lg@1x-2.jpg 1x, ./images/team/img-lg@2x-2.jpg 2x"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-md@1x-2.jpg 1x, ./images/team/img-md@2x-2.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-sm@1x-2.jpg 1x, ./images/team/img-sm@2x-2.jpg 2x"
+                />
+               
+                <img src="./images/team/img-md@1x-2.jpg" alt="Marketing" width="450" height="460" loading="lazy" />
+              </picture>
+ 
               <div class="container__body">
                 <h3 class="list-team__subtitle">Ryan Harris</h3>
                 <p class="list-team__paragraph">Marketing</p>
@@ -257,7 +336,26 @@
               </div>
             </li>
             <li class="list-team__item">
-              <img src="images/ui__designer.jpg" alt="UI Designer" width="450" height="460" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-lg@1x-3.jpg 1x, ./images/team/img-lg@2x-3.jpg 2x"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-md@1x-3.jpg 1x, ./images/team/img-md@2x-3.jpg 2x"
+                />
+                <!-- phone screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-sm@1x-3.jpg 1x, ./images/team/img-sm@2x-3.jpg 2x"
+                />
+               
+                <img src="./images/team/img-md@1x-3.jpg" alt="UI Designer" width="450" height="460" loading="lazy" />
+              </picture>
+        
               <div class="container__body">
                 <h3 class="list-team__subtitle">Tyler Moore</h3>
                 <p class="list-team__paragraph">UI Designer</p>
@@ -350,68 +448,70 @@
     <!--Footer-->
     <footer class="footer-page">
       <div class="container footer-page__container">
-        <div class="container-contact">
-          <div class="container__logo">
-            <a class="logo footer-page__logo" href="./index.html">
-            <span class="footer-page__logo--blue">Web</span>
-            Studio
-          </a>
+        <div class="container__wrapper">
+          <div class="container-contact">
+            <div class="container__logo">
+              <a class="logo footer-page__logo" href="./index.html">
+                <span class="footer-page__logo--blue">Web</span>
+                Studio
+              </a>
+            </div>
+            <address class="address">
+              <ul class="footer-contact">
+                <li class="footer-contact__item">
+                  <a
+                    class="footer-contact__address"
+                    href="https://goo.gl/maps/LB5qMua8eFtqYcHc9"
+                    target="_blank"
+                    rel="noreferrer noopener nofollow"
+                  >
+                    695 Park Ave, New York, NY 10065,
+                    <br />
+                    United States
+                  </a>
+                </li>
+                <li class="footer-contact__item">
+                  <a class="footer-contact__link" href="mailto:info@devstudio.com">info@example.com</a>
+                </li>
+                <li class="footer-contact__item">
+                  <a class="footer-contact__link" href="tel:+12127724150">+1 212-772-4150</a>
+                </li>
+              </ul>
+            </address>
           </div>
-          <address class="address">
-            <ul class="footer-contact">
-              <li class="footer-contact__item">
-                <a
-                  class="footer-contact__address"
-                  href="https://goo.gl/maps/LB5qMua8eFtqYcHc9"
-                  target="_blank"
-                  rel="noreferrer noopener nofollow"
-                >
-                  695 Park Ave, New York, NY 10065,
-                  <br />
-                  United States
+          <div class="container-join">
+            <p class="container-join__subtitle">Find us on</p>
+            <ul class="list-social">
+              <li class="list-social__item">
+                <a href="" class="list-social__link list-social__link--theme-dark" aria-label="instagram">
+                  <svg class="list-social__icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="footer-contact__item">
-                <a class="footer-contact__link" href="mailto:info@devstudio.com">info@example.com</a>
+              <li class="item">
+                <a href="" class="list-social__link list-social__link--theme-dark" aria-label="twitter">
+                  <svg class="list-social__icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-contact__item">
-                <a class="footer-contact__link" href="tel:+12127724150">+1 212-772-4150</a>
+              <li class="item">
+                <a href="" class="list-social__link list-social__link--theme-dark" aria-label="facebook">
+                  <svg class="list-social__icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="item">
+                <a href="" class="list-social__link list-social__link--theme-dark" aria-label="linkedin">
+                  <svg class="list-social__icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="container-join">
-          <p class="container-join__subtitle">Find us on</p>
-          <ul class="list-social">
-            <li class="list-social__item">
-              <a href="" class="list-social__link list-social__link--theme-dark" aria-label="instagram">
-                <svg class="list-social__icon">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="item">
-              <a href="" class="list-social__link list-social__link--theme-dark" aria-label="twitter">
-                <svg class="list-social__icon">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="item">
-              <a href="" class="list-social__link list-social__link--theme-dark" aria-label="facebook">
-                <svg class="list-social__icon">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="item">
-              <a href="" class="list-social__link list-social__link--theme-dark" aria-label="linkedin">
-                <svg class="list-social__icon">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="subscribe">
           <p class="container-join__subtitle">Subscribe to the newsletter</p>
@@ -484,5 +584,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

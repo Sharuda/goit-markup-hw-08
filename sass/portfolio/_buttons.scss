@@ -2,11 +2,15 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    gap: 8px;
+
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
 }
 
-.list-buttons__item:not(:last-child) {
-    margin-right: 8px;
-}
 
 .list-buttons__link {
     padding-top: 6px;
