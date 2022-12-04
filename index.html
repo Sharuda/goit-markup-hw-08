@@ -25,27 +25,6 @@
             Studio
           </a>
 
-          <button
-            type="button"
-            class="menu-button"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg width="40" height="40" aria-label="switch mobile menu">
-              <use class="menu-button__icon-cross" href="./images/icons.svg#icon-close_40px"></use>
-              <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu_40px"></use>
-            </svg>
-          </button>
-
-          <div class="menu-container" id="menu-container" data-menu>
-            <div class="navigation"></div>
-            <div class="contacts"></div>
-          </div>
-
-          <!-- <div class="container">
-            <button type="button" data-modal-open>Открыть</button>
-          </div> -->
           <ul class="site-nav">
             <li class="site-nav__item site-nav__item--current">
               <a class="site-nav__link site-nav__link--current" href="./index.html">Studio</a>
@@ -74,6 +53,17 @@
             </a>
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg class="menu-button__icon-menu" width="40" height="40" aria-label="switch mobile menu-open">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -595,6 +585,34 @@
         </form>
       </div>
     </div>
+    <!-- mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-button__icon-cross" width="40" height="40" aria-label="switch mobile menu-cloze">
+          <use href="./images/icons.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Studio</a></li>
+        <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link">Portfolio</a></li>
+        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Contacts</a></li>
+      </ul>
+      <ul class="mobile-contact">
+        <li class="mobile-contact__item">
+          <a class="mobile-contact__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+        <li class="mobile-contact__item mobile-contact__item--bottom">
+          <a class="mobile-contact__link mobile-contact__link--grey" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+      </ul>
+      <ul class="mobile-socials">
+        <li class="mobile-socials__item"><a href="" class="mobile-socials__link">Instagram</a></li>
+        <li class="mobile-socials__item"><a href="" class="mobile-socials__link">Twitter</a></li>
+        <li class="mobile-socials__item"><a href="" class="mobile-socials__link">Facebook</a></li>
+        <li class="mobile-socials__item"><a href="" class="mobile-socials__link">LinkedIn</a></li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
     <script
       defer
@@ -602,6 +620,6 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

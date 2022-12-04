@@ -1,16 +1,129 @@
 
-.menu-button{
+.menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @media (max-width: 767px) {
+                display: none;
+}
+
+}
+.mobile-menu__item:not(:last-child){
+    margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    
+    &--current{
+        color: $accent-color;
+    }
+
+}
+
+
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-  
-    
+
+    margin-left: auto;
     padding: 0;
     background-color: transparent;
     cursor: pointer;
     border: none;
     border-radius: 50%;
     outline: none;
-    min-height: 40px;
-    min-width: 40px;
+
+    &:hover, &:focus{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 768px){
+        display: none;
+    }
+}
+
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px;
+    background-color: $white-color;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    overflow-y: scroll;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+}
+
+.mobile-menu {
+    margin-bottom: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-button__icon-cross,
+.menu-button__icon-menu{
+    .menu-toggle &:hover, &:focus{
+        fill: $accent-color;
+    }
+}
+.mobile-contact__item:not(:last-child){
+    margin-bottom: 32px;
+}
+.mobile-contact__item--bottom{
+    margin-bottom: 64px;
+}
+.mobile-contact__link{
+    font-weight: 500;
+    font-size: 34px;
+    line-height: calc(40 / 34);
+    letter-spacing: 0.02em;
+    color: $accent-color;
+}
+.mobile-contact__link--grey{
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    color: $additional-color;
+}
+.mobile-socials{
+    display: flex;
+}
+.mobile-socials__item:not(:last-child){
+    margin-right: 20px;
+}
+.mobile-socials__link{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: $accent-color;
 }
