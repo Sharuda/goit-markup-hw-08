@@ -9,6 +9,10 @@
     visibility: visible;
 
     transition: opacity $time-transition, visibility $time-transition;
+
+    padding: 93px 15px;
+
+    overflow-y: scroll;
 }
 
 .is-hidden {
@@ -18,20 +22,33 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
     padding: 40px;
 
-    width: 528px;
+    
     background-color: $white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transform: translate(-50%, -50%);
+ 
 
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
+    @media (min-width: 768px) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            
+            transform: translate(-50%, -50%);
+            
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+        }
+
+                @media (min-width: 1200px){
+                    width: 528px;
+                }
+
 }
 
 .modal-animation {
