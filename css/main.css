@@ -1525,6 +1525,7 @@ button {
           justify-content: center;
   text-align: center;
   gap: 8px;
+  row-gap: 15px;
 }
 @media screen and (max-width: 767px) {
   .list-buttons {
