@@ -1,6 +1,10 @@
 .section-team {
     @include section;
     background-color: $background-color;
+    
+    @media screen and (min-width: 1200px) {
+            @include section (94px, 94px);
+        }
 }
 
 .list-team {

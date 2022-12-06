@@ -4,6 +4,7 @@
 
     @media screen and (min-width: 1200px) {
             display: block;
+            @include section (0px, 94px);
         }
 
 }
@@ -25,6 +26,10 @@
     font-weight: 700;
     color: $primary-text-color;
     line-height: 1.17;
+
+    @media screen and (max-width:1199px) {
+        font-size: 28px;
+    }
 }
 
 .our-work__text {

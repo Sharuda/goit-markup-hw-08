@@ -22,7 +22,10 @@
 }
 
 .modal {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 40px;
 
     
@@ -30,23 +33,21 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     animation-timing-function: linear;
 
-    @media (min-width: 768px) {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 450px;
-            
-            transform: translate(-50%, -50%);
-            
+    @media screen and (max-width: 1199px) {
+            width: 95%;
+            max-width: 450px;
+            height: 95%;
+            max-height: 609px;
+            overflow-y: scroll;
             
         }
 
-                @media (min-width: 1200px){
+                @media creen and (min-width: 1200px){
                     width: 528px;
+                    height: 581px;
                 }
 
 }

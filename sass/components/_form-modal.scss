@@ -78,8 +78,8 @@
 
 .form__icon--custom {
     display: block;
-    width: 16px;
-    height: 15px;
+    min-width: 16px;
+    min-height: 15px;
     border: 2px solid $primary-text-color;
     border-radius: 4px;
 
